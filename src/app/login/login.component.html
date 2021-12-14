@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="content" >
+    <!-- <div class="content" *ngIf="isLogin"> -->
+        <div class="logo">
+            <img src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg" class="logo-box">
+            <h2 class="logo-text">Facebook helps you connect and share with the people in your life.</h2>
+        </div>
+        <form class="form" #loginForm="ngForm" 
+        (ngSubmit)="onSubmit()">
+            <div class="form-login">
+                <div class="login-input">
+                    <input type="email" name="Emai address" 
+                    placeholder="Email address" 
+                    class="input-1" [(ngModel)]="logForm.email">
+
+                    <input type="password" name="Password" 
+                    placeholder="Password" class="input-2" 
+                    [(ngModel)]="logForm.password" >
+                </div>
+                <div class="help-text" [ngStyle]="{'color': msg ==='login Sucess' ? 'green' : 'red'}" >{{ msg }}</div>
+                <div class="login-btn">
+                    <button type="submit" class="btn btn-primary">Log In</button>
+                    <br>
+                    <a routerLink="/forget" routerLinkActive="active" class="btn-forget">Forgotten password?</a>
+                </div>
+                <hr>
+                <div class="login-new">
+                    <!-- <a href="#popup" class="popup"><button type="button" class="btn btn-success" (click)="onNewAcc()">Create new button</button></a> -->
+                    <a href="#popup" routerLink="/signup" class="popup"><button type="button" class="btn btn-success">Create new button</button></a>
+                </div>
+            </div>
+            <p class="form-text"><a href="#" class="text-link">Create a Page</a>for a celebrity, brand or business.</p>
+        </form>
+    </div>
+</div>
+<!-- <div id="#popup" class="container-1">
+    <app-signup></app-signup>
+</div> -->
+<!-- <div class="container-1" *ngIf="!isLogin" (click)="onNewAcc()">
+    <app-signup></app-signup>
+</div> -->

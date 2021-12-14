@@ -1,0 +1,72 @@
+<div class="container">
+    <div class="row">
+        <div class="center">
+            <div class="center__story">
+                <!-- <div class="center__story-img">
+                    <img src="" alt="img">
+                    <mat-icon>plus</mat-icon>
+                    <span>{{name}}</span>
+                </div> -->
+                <div class="center__story-img" *ngFor="let image of url">
+                    <img src="{{ image.bg }}" alt="img" class="center__story-img-bg">
+                    <span class="center__story-img-name">{{ image.name }}</span>
+                    <img src="{{ image.pp}}" alt="img" class="center__story-img-pp">
+                </div>
+            </div>
+            <div class="center__middle" >
+                <form class="center__middle-content" #postForm="ngForm" (ngSubmit)="onCreatePost(postForm.value)">
+                    <img src="" alt="img" class="center__middle-content-img">
+                    <label for="Post"></label>
+                    <input type="text" placeholder="type" class="center__middle-content-input" id="Post"
+                    required
+                    ngModel
+                    name="Post">
+                    <button type="submit" class="btn">submit</button>
+                    <hr>
+                    <!-- <div class="content-form-file">
+                        <input #imageInput accept="image/*" type="file" class="content-form-file-img" (change)="fileProgress($event)">
+                    </div>
+                    <div class="image-preview mb-3" *ngIf="previewUrl">
+                        <img [src]="previewUrl" height="200" width="200" />                 
+                    </div>
+         
+                    <div class="mb-3" *ngIf="uploadedFilePath">
+                        {{uploadedFilePath}}
+                    </div>
+                    <button type="submit" class="btn" (click)="onUpload()">submit</button> -->
+                    <button type="button" class="center__middle-content-link">
+                        <mat-icon class="center__middle-content-link-icon">video_library</mat-icon>
+                        <span class="center__middle-content-link-text">Live video</span>
+                    </button>
+                    <button type="button" class="center__middle-content-link">
+                        <mat-icon class="center__middle-content-link-icon">image</mat-icon>
+                        <span class="center__middle-content-link-text">image / video</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <section class="section" *ngFor="let post of posts">
+            <div class="center__middle-content1" >
+                <img src="" alt="img" class="center__middle-content1-img">
+                <span class="center__middle-content1-name">Name</span>
+                <hr>
+                <div class="center__middle-content1-0">
+                    <img src="" alt="">
+                    <p class="center__middle-content1-1">{{ post.Post }}</p>
+                </div>
+                <a href="#" style="cursor: pointer;" class="center__middle-content1-link">
+                    <mat-icon class="center__middle-content1-link-icon1">thumb_up</mat-icon>
+                    <span class="center__middle-content1-link-name1">Like</span>
+                </a>
+                <a href="#" style="cursor: pointer;" class="center__middle-content1-link">
+                    <mat-icon class="center__middle-content1-link-icon2">comments</mat-icon>
+                    <span class="center__middle-content1-link-name2">Comments</span>
+                </a>
+                <a href="#" style="cursor: pointer;" class="center__middle-content1-link">
+                    <mat-icon class="center__middle-content1-link-icon3">share</mat-icon>
+                    <span class="center__middle-content1-link-name3">Share</span>
+                </a>
+            </div>
+        </section>
+    </div>
+</div>

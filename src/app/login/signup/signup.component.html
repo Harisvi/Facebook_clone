@@ -1,0 +1,41 @@
+<div id="container">
+    <div class="container">
+       <a href="#login"><img class="img" src="https://static.xx.fbcdn.net/rsrc.php/v3/yC/r/Q0G2UVjVQ4_.png" alt="" width="24" height="24" id="u_a_9_rF"></a>
+        <div class="text">
+            <h2>Sign Up</h2>
+            <h3>It's quick and easy</h3>
+        </div>
+        <hr>
+        <form class="form" #registartionForm="ngForm"
+        (ngSubmit)="onSignup()">
+            <input type="text" name="first name" placeholder="First name" class="form-input" [(ngModel)]="authForm.firstName" name="firstname" required>
+            <input type="text" name="surname" placeholder="Surname" class="form-input"  [(ngModel)]="authForm.surname" name="surname">
+
+            <input type="email" name="email or phone" placeholder="Mobile number or email address" 
+            class="form-email" [(ngModel)]="authForm.email" name="email" 
+            required>
+            <!-- <div class="help-text" *ngIf="email.touched && !email.valid">
+                <div *ngIf="email.errors.required">Email is required</div>
+            </div> -->
+            <input type="password" name="password" placeholder="New password" 
+            class="form-password"  [(ngModel)]="authForm.password" name="password" 
+            required minlength="6">
+
+            <label for="birthday" class="form-label">Date of birth</label>
+            <input type="date" [(ngModel)]="authForm.dob" name="birthday" id="birthday" class="form-date">
+            <div class="form-radio">
+                <p class="form-text">Gender</p>
+                <label for="Female" class="form-radio-text">Female</label>
+                <input type="radio" id="Female" value="Female" name="gender" class="form-radio-input">
+                <label for="Male" class="form-radio-text">Male</label>
+                <input type="radio" id="Male" value="Male" name="gender"class="form-radio-input">
+                <label for="Others" class="form-radio-text">Others</label>
+                <input type="radio" id="Others" value="Others" name="gender"class="form-radio-input">
+            </div>
+            <p class="text-1">By clicking Sign Up, you agree to our Terms, Data Policy and Cookie Policy. You may receive SMS notifications from us and can opt out at any time.</p>
+
+            <button type="submit" class="btn btn-success" [disabled]="!registartionForm.valid" >Sign Up</button>
+        </form>
+    </div>
+</div>
+<div class="login">app-login</div>

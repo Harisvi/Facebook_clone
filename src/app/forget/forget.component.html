@@ -1,0 +1,32 @@
+<div class="container-2">
+    <div class="forget">
+        <nav class="forget-navbar">
+            <div class="logo">
+              <a routerLink="/"><img src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg" class="logo-box"></a>  
+            </div>
+            <div class="forget-i">
+                <input type="email" placeholder="email or phone" class="forget-input">
+                <input type="Password" placeholder="Password" class="forget-input">
+                <button class="btn-primary">Log In</button>
+                <a href="#" class="forget-acc">Forgetten account?</a>
+            </div>
+        </nav>
+        <main class="forget-main">
+            <div class="forget-main-1">
+                <div class="forget-text">
+                    <h2 class="forget-text-1">Find Your Account</h2>
+                    <hr>
+                    <p class="forget-text-2">Please enter your email address or mobile number to search for your account.</p>
+                </div>
+                <form class="forget-search" 
+                #forget="ngForm" (ngSubmit)="onForget()">
+                    <input type="email" placeholder="email" class="forget-input-1" [(ngModel)]="forgetForm.email" name="email">
+                    <hr>
+                    
+                    <button class="btn" routerLink="/change" routerLinkActive="active" type="button">Cancel</button>
+                    <button class="btn-primary-1" type="submit">Search</button>
+                </form>
+            </div>
+        </main>
+    </div>
+</div>

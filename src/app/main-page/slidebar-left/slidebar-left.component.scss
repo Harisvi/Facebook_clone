@@ -1,0 +1,26 @@
+.slidebar__left{
+    width: 360px;
+    margin: 5px;
+    padding: 10px;
+    &-img{
+        width: 344px;
+        height: 52px;
+        font-size: 24px;
+    }
+    &-groups{
+        width: 344px;
+        height: 52px;
+        position: relative;
+        &-1{
+            font-size: 30px;
+        }
+        &-2{
+            font-size: 15px;
+            font-weight: 300;
+            color: #050505;
+            position: absolute;
+            top: 5px;
+            left: 50px;
+        }
+    }
+}

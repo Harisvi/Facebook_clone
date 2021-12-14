@@ -1,0 +1,61 @@
+<div class="container">
+    <div class="row">
+        <ul class="header">
+            <li class="header__left">
+                <div class="header__left-logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1200px-Facebook_Logo_%282019%29.png"
+                     class="header__left-logo-box" style="width: 40px;">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon" 
+                    class="header__left-logo-icon">search_outline</mat-icon>
+                    <input type="search" placeholder="search facebook" 
+                    class="header__left-logo-search">
+                </div>
+            </li>
+            <li class="header__middle">
+                <div class="header__middle-icon">
+                    <mat-icon aria-hidden="false" class="header__middle-icon-1">home</mat-icon>
+                </div>
+                <div class="header__middle-icon">
+                    <mat-icon aria-hidden="false" class="header__middle-icon-2">ondemand_video</mat-icon>
+                </div>
+                <div class="header__middle-icon">
+                    <mat-icon aria-hidden="false" class="header__middle-icon-3">store</mat-icon>
+                </div>
+                <div class="header__middle-icon">
+                    <mat-icon aria-hidden="false" class="header__middle-icon-4">group</mat-icon>
+                </div>
+                <div class="header__middle-icon">
+                    <mat-icon aria-hidden="false" class="header__middle-icon-5">gamepad</mat-icon>
+                </div>
+            </li>
+            <li class="header__right">
+                <div class="header__right-img">
+                    <a href="">
+                        <img src="" alt="img"class="header__right-img">
+                        <p>{{ name }}</p>
+                    </a>
+                </div>
+                <div class="header__right-icon">
+                    <mat-icon aria-hidden="false" class="header__right-icon-1">apps</mat-icon>
+                </div>
+                <div class="header__right-icon">
+                    <mat-icon aria-hidden="false" class="header__right-icon-2">message</mat-icon>
+                </div>
+                <div class="header__right-icon">
+                    <mat-icon aria-hidden="false" class="header__right-icon-3">notifications</mat-icon>  
+                </div>
+                <div class="header__right-icon">
+                    <a style="cursor: pointer;" class="dropdown-toggle" role="button" (click)="onclick()">
+                        <mat-icon aria-hidden="false" class="header__right-icon-4">expand_more</mat-icon>
+                    </a>
+                    <ul class="dropdown-menu" style="list-style: none;" *ngIf="isDropdown">
+                        <li class="dropdown-menu-1">
+                          <a style="cursor: pointer;" class="dropdown-menu-1" (click)="onLogout()">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+</div>
